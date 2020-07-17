@@ -68,3 +68,42 @@ function brickCalculator(floorCount)
     }
     return neededBricks;
 }
+
+//function for checking the smallest name from an array.
+//the input shuld be in an array
+function tinyFrined(nameArray)
+{
+    //initial variable are decleared to store the temporary values of string length and sname. Initial values are determined as that do not effect future values.
+    var tinyLength = Infinity;
+    var tinyest = "";
+    //first condition to check the array have any component in it.
+    if(nameArray.length>0)
+    {
+        //loop is run to itarate the array
+        for(var i = 0; i < nameArray.length; i++)
+        {
+            //nested condition to check if the value is string.
+            if(typeof nameArray[i]=='string')
+            {
+                //another nested condition to find the shortest naame.
+                if(nameArray[i].length<=tinyLength)
+                {
+                    tinyLength = nameArray[i].length;
+                    tinyest = nameArray[i];
+                }        
+            }
+            //if the value is not string necessary warnings are given.
+            else
+            {
+                return "Digit can not be a Name";
+            }
+        }
+    //if there are no input then necessary warnings are given.
+    }
+    else
+    {
+        return "No input found";
+    }
+    return tinyest;
+}
+
