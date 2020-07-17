@@ -71,7 +71,7 @@ function brickCalculator(floorCount)
 
 //function for checking the smallest name from an array.
 //the input shuld be in an array
-function tinyFrined(nameArray)
+function tinyFriends(nameArray)
 {
     //initial variable are decleared to store the temporary values of string length and sname. Initial values are determined as that do not effect future values.
     var tinyLength = Infinity;
